@@ -115,7 +115,6 @@ var $on = function $on(target, event, handler) {
   return target.addEventListener(event, handler);
 };
 /**
- *
  * @param literal
  * @param cooked
  * @return {String}
@@ -131,7 +130,6 @@ var $html = function $html(literal) {
     cooked[_key - 1] = arguments[_key];
   }
 
-  console.warn(literal, cooked);
   cooked.forEach(function (cook, i) {
     var lit = literal[i];
 
