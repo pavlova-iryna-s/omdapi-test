@@ -106,9 +106,21 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.$assert = exports.$html = exports.$on = void 0;
 
+/**
+ * @param {HTMLElement} target
+ * @param {String} event
+ * @param {Function} handler
+ */
 var $on = function $on(target, event, handler) {
   return target.addEventListener(event, handler);
 };
+/**
+ *
+ * @param literal
+ * @param cooked
+ * @return {String}
+ */
+
 
 exports.$on = $on;
 
@@ -119,6 +131,7 @@ var $html = function $html(literal) {
     cooked[_key - 1] = arguments[_key];
   }
 
+  console.warn(literal, cooked);
   cooked.forEach(function (cook, i) {
     var lit = literal[i];
 
@@ -132,6 +145,11 @@ var $html = function $html(literal) {
   result += literal[literal.length - 1];
   return result;
 };
+/**
+ * @param {*} condition
+ * @param {String} message
+ */
+
 
 exports.$html = $html;
 

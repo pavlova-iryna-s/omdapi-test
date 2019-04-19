@@ -1,7 +1,17 @@
+/**
+ * @param {HTMLElement} target
+ * @param {String} event
+ * @param {Function} handler
+ */
 const $on = (target, event, handler) => {
     return target.addEventListener(event, handler);
 };
 
+/**
+ * @param literal
+ * @param cooked
+ * @return {String}
+ */
 const $html = (literal, ...cooked) => {
     let result = '';
 
@@ -21,6 +31,10 @@ const $html = (literal, ...cooked) => {
     return result;
 };
 
+/**
+ * @param {*} condition
+ * @param {String} message
+ */
 const $assert = (condition, message) => {
     if (condition) {
         return;
